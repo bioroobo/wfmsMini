@@ -12,3 +12,6 @@ class Article(models.Model):
     photo = models.ImageField(upload_to='photos/%Y/%m/%d/') #изображение, механизм загрузки изображения встроен в библиотеку Pillow
                               # upload_to - куда загружать изображения
                               # 'photos/%Y/%m/%d' - изображения будут загружаться в папку 'photos' и распределяться по подпапкам год/месяц/день
+
+    def __str__(self):
+        return self.title
