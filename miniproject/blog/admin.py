@@ -5,6 +5,7 @@ from .models import Article
 class ArticleAdmin(admin.ModelAdmin):
     #выведем id и title и дату создания
     list_display = ('id', 'title', 'created_at')
+    list_display_links = ('id', 'title')
 
 
 # Register your models here.
