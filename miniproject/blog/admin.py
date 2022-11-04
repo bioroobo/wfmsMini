@@ -3,9 +3,10 @@ from .models import Article
 
 # настройка представления в админке - укажем какие колонки будут выводиться в списке Articles:
 class ArticleAdmin(admin.ModelAdmin):
-    #выведем id и title и дату создания
-    list_display = ('id', 'title', 'created_at')
-    list_display_links = ('id', 'title')
+
+    list_display = ('id', 'title', 'created_at') #выведем id и title и дату создания
+    list_display_links = ('id', 'title') # эти поля будут ссылками
+    search_fields = ('title', 'content') #поле поиска, будет поиск в: title и content
 
 
 # Register your models here.
