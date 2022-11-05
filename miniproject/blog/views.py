@@ -4,7 +4,7 @@ from .models import Article
 
 def home(request):
     posts = Article.objects.all()
-    return render(request, 'blog/home.html')
+    return render(request, 'blog/home.html', {'name':'John'})
 
 def test(request):
     return HttpResponse('<h1>Test page!</h1>')
